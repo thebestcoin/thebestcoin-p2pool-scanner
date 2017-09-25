@@ -1,0 +1,15 @@
+{
+        http_port : 8085,                                               // local http port (set 0 to disable http server)
+        currency_url : "https://github.com/thebestcoin",
+        currency : "TheBestCoin",
+        nodes : {'5.230.11.229':'pool-mainnet1.thebestcoin.io:38802', '5.230.11.230':'pool-mainnet2.thebestcoin.io:38802'},
+        speed_abbrev : "Mh/s",                                  // should be Mh/s for Litecoin and Gh/s for Bitcoin
+        addr_file : "../thebestcoin-p2pool/data/thebestcoin/addrs",  // p2pool address file to scan
+        init_file : "p2pool-litecoin-init.txt", // p2pool address file to scan on initial run (if no storage file found)
+        store_file : "p2pool-litecoin-public.json",     // p2pool address file to store data
+        probe_N_IPs_simultaneously : 50,                        // number of IPs to probe simultaneously
+        http_socket_timeout : 3000,                     // msec
+        rescan_list_delay : 60000, // msec to wait (when done) before restarting full rescan
+        flush_to_file_every_N_msec : 0, // set to 0 to disable file flushing
+        flush_filename : "index.html",                  // filename to which the app will flush the web page rendering
+}
